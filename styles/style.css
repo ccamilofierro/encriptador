@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --dark-green: #5F6F52;
+    --light-green: #A9B388;
+    --light-yellow: #FEFAE0;
+    --light-brown: #B99470;
+    --white: #ffffff;
+
+    --inter: 'Inter', sans-serif;
+}
+
+body {
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-yellow);
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    height: auto; 
+    width: 70%;
+}
+
+.input-section, .output {
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 80%;
+    padding: 20px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 60px;
+}
+
+#inputText{
+    color: var(--dark-green);
+    font-size: 2rem;
+}
+
+textarea {
+    font-family: 'Inter';
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: transparent; 
+    resize: none;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: var(--dark-green);
+}
+
+.alert-message {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.alert-message .icon {
+    margin-right: 2px; 
+    width: 12px; 
+    height: auto; 
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 15px 24px;
+    border: none;
+    cursor: pointer;
+}
+
+#encryptBtn {
+    background-color: var(--dark-green);
+    color: var(--light-yellow);
+    border-radius: 30px;
+    width: 250px;
+}
+
+#decryptBtn {
+    background-color: var(--light-brown);
+    color: var(--light-yellow);
+    border-radius: 30px;
+    width: 250px;
+}
+
+#encryptBtn:hover,
+#decryptBtn:hover {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+    flex: 1;
+    box-sizing: border-box;
+    background-color: var(--light-green);
+    border-radius: 8px;
+    color: var(--light-yellow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 70%;
+    padding: 20px; 
+    margin: 5%;
+}
+
+#outputImage {
+    width: 250px;  
+    height: auto;  
+}
+
+#outputText1 {
+    font-weight: bold; 
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+#outputText2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+#outputText {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: var(--light-yellow);
+}
+
+#copyBtn {
+    border: none;
+    border-radius: 30px;
+    background-color: var(--light-yellow);
+    color: var(--dark-green);
+    cursor: pointer;
+    width: 250px;
+}
+
+#copyBtn:hover {
+    background-color: var(--white);
+    color: var(--dark-green);
+}
+
+.hidden {
+    display: none;
+}
+
+.footer-container {
+    max-width: 100%;
+    margin: 0 auto;
+    color: var(--light-yellow);
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--dark-green);
+    padding: 5px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+
+    .header{
+        padding: 2%;  
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .input-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #inputText{
+        padding: 5%;
+        height: 250px;
+    }
+
+    .buttons {
+        width: 100%;
+        align-items: center;
+    }
+
+    .output {
+        width: 100%;
+        order: 2; 
+        margin: 0%;
+        margin-top: 10%;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+
+    #outputImage{
+        display: none;
+    }
+}
+
+@media (max-width: 365px) {
+    .buttons {
+        flex-direction: column;
+    }
+}

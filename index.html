@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+        <img src="./assets/images/Logo.png" alt="Logo">
+    </div>
+    </header>
+    <div class="container">
+        <!-- Input Section -->
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Ingrese el texto aquí"></textarea>
+            <!-- Alert Message -->
+            <div class="alert-message">
+                <img src="./assets/images/Group.png" alt="Icono" class="icon">
+                Solo letras minúsculas y sin acentos
+            </div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <button id="encryptBtn">Encriptar</button>
+                <button id="decryptBtn">Desencriptar</button>
+            </div>
+        </div>
+        <!-- Output Section -->
+        <div class="output">
+            <img id="outputImage" src="./assets/images/Muñeco.png" alt="Imagen de Ejemplo">
+            <p id="outputText1">Ningún mensaje fue encontrado</p>
+            <p id="outputText2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <textarea id="outputText" class="hidden" readonly></textarea>
+            <button id="copyBtn" class="hidden">Copiar</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Encriptador - Cristian Camilo Garzón Fierro</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
